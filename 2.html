@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标杨广告旅游品有限公司</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#products">产品</a></li>
+                <li><a href="#cart">购物车</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 公司简介 -->
+    <section id="about">
+        <h1>标杨广告旅游品有限公司</h1>
+        <p>专注于广告旅游品行业30年，为客户提供高品质的雨伞、酒杯、打火机等商品，支持出口业务。欢迎国内外客户的合作！</p>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="products">
+        <h1>我们的产品</h1>
+        <!-- 产品1：雨伞 -->
+        <div class="product">
+            <h2>雨伞</h2>
+            <p>单价：¥98，购买30只以上每只¥78</p>
+            <label for="umbrella-quantity">数量：</label>
+            <input type="number" id="umbrella-quantity" min="1" value="1">
+            <button onclick="addToCart('雨伞', 98, 78, 30, 'umbrella-quantity')">加入购物车</button>
+        </div>
+
+        <!-- 产品2：酒杯 -->
+        <div class="product">
+            <h2>酒杯</h2>
+            <p>单价：¥50，购买100只以上每只¥40</p>
+            <label for="cup-quantity">数量：</label>
+            <input type="number" id="cup-quantity" min="1" value="1">
+            <button onclick="addToCart('酒杯', 50, 40, 100, 'cup-quantity')">加入购物车</button>
+        </div>
+
+        <!-- 产品3：打火机 -->
+        <div class="product">
+            <h2>打火机</h2>
+            <p>单价：¥1，购买1000只以上每只¥0.7</p>
+            <label for="lighter-quantity">数量：</label>
+            <input type="number" id="lighter-quantity" min="1" value="1">
+            <button onclick="addToCart('打火机', 1, 0.7, 1000, 'lighter-quantity')">加入购物车</button>
+        </div>
+    </section>
+
+    <!-- 购物车 -->
+    <section id="cart">
+        <h2>购物车</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>总价：</strong><span id="total-price">¥0</span></p>
+        <button onclick="clearCart()">清空购物车</button>
+        <button onclick="checkout()">结算</button>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact">
+        <h2>联系我们</h2>
+        <p><strong>电话:</strong> 1234567</p>
+        <p><strong>邮箱:</strong> example@example.com</p>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024 标杨广告旅游品有限公司. 保留所有权利。</p>
+    </footer>
+
+    <!-- 引入 JavaScript -->
+    <script src="1.js"></script>
+</body>
+</html>
